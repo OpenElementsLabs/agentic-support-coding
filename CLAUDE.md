@@ -39,7 +39,7 @@ The plugin is installed from inside Claude Code:
 
 ```
 /plugin marketplace add OpenElementsLabs/agentic-support-coding
-/plugin install agentic-support-coding@open-elements
+/plugin install agentic-support-coding@open-elements-coding
 ```
 
 Skills are namespaced under the plugin, e.g. `/agentic-support-coding:modern-java`.

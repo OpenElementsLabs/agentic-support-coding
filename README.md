@@ -29,7 +29,7 @@ Install from inside Claude Code:
 
 ```
 /plugin marketplace add OpenElementsLabs/agentic-support-coding
-/plugin install agentic-support-coding@open-elements
+/plugin install agentic-support-coding@open-elements-coding
 ```
 
 Then restart Claude Code (or run `/reload-plugins`).
@@ -45,7 +45,7 @@ The `web-frontend-builder` skill points to the `typescript-best-practices` and `
 Because the plugin is versioned, updates arrive when the `version` in `plugin.json` is bumped. Pull the latest release with:
 
 ```
-/plugin marketplace update open-elements
+/plugin marketplace update open-elements-coding
 ```
 
 ## Repository layout
