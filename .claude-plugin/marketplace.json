@@ -1,0 +1,34 @@
+{
+  "name": "open-elements",
+  "owner": {
+    "name": "Open Elements",
+    "email": "hendrik.ebbers@open-elements.com"
+  },
+  "description": "Open Elements marketplace for Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "agentic-support-coding",
+      "source": "./",
+      "description": "Coding best-practices skills for Open Elements projects: modern idiomatic Java, public Java API design, distinctive production-grade frontend design, web accessibility (WCAG 2.1), and building web frontends with the Next.js/React/TypeScript/Tailwind/shadcn stack.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Open Elements"
+      },
+      "homepage": "https://github.com/OpenElementsLabs/agentic-support-coding",
+      "repository": "https://github.com/OpenElementsLabs/agentic-support-coding",
+      "license": "Apache-2.0",
+      "category": "productivity",
+      "keywords": [
+        "open-elements",
+        "coding",
+        "best-practices",
+        "java",
+        "modern-java",
+        "api-design",
+        "typescript",
+        "frontend",
+        "accessibility"
+      ]
+    }
+  ]
+}

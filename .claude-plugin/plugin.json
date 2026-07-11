@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "agentic-support-coding",
+  "displayName": "Open Elements Agentic Support Coding",
+  "version": "0.1.0",
+  "description": "Coding best-practices skills for Open Elements projects: modern idiomatic Java, public Java API design, distinctive production-grade frontend design, web accessibility (WCAG 2.1), and building web frontends with the Next.js/React/TypeScript/Tailwind/shadcn stack.",
+  "author": {
+    "name": "Open Elements",
+    "url": "https://open-elements.com"
+  },
+  "homepage": "https://github.com/OpenElementsLabs/agentic-support-coding",
+  "repository": "https://github.com/OpenElementsLabs/agentic-support-coding",
+  "license": "Apache-2.0",
+  "keywords": [
+    "open-elements",
+    "coding",
+    "best-practices",
+    "java",
+    "modern-java",
+    "api-design",
+    "typescript",
+    "frontend",
+    "accessibility"
+  ]
+}
