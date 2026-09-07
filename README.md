@@ -18,6 +18,7 @@ This plugin is a focused extract of the coding skills from [`claude-base`](https
 | Skill | What it does |
 | --- | --- |
 | `frontend-design` | Create distinctive, production-grade frontend interfaces with high design quality — typography, color, motion, and composition that avoid generic AI aesthetics. |
+| `open-elements-app-layout` | Build the standard Open Elements application shell and view flow on `@open-elements/nextjs-app-layer` + `@open-elements/ui`: route groups, the thin `page.tsx` + `<route>-client.tsx` split, component co-location, the dark-sidebar/light-content surface rules, sidebar composition, admin pages, i18n, the OIDC wiring and the backend proxy. |
 | `web-frontend-builder` | Build web frontend applications with the Open Elements stack (Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, pnpm). |
 | `web-accessibility` | Audit and improve web accessibility following WCAG 2.1 guidelines (ARIA, keyboard navigation, color contrast, alt text, focus management). |
 
