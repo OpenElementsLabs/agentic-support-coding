@@ -441,6 +441,9 @@ resolve: {
   `TypeError: … is not a function`. Exclude that one file from coverage with the reason in the config,
   rather than mocking the font module to assert nothing.
 
+- Cross-browser smoke tests (`frontend/e2e/`, Playwright) open every page in Chromium, Firefox,
+  WebKit and a hardened Firefox profile in CI; set them up with the `browser-compatibility` skill.
+
 ## Adding a view — checklist
 
 1. `src/app/(app)/<segment>/page.tsx` — thin Server Component, role gate here if needed.
@@ -450,7 +453,9 @@ resolve: {
 5. German **and** English strings in `src/lib/i18n/{de,en}.ts`.
 6. A `NavItem` in the sidebar with an `active` predicate that does not also match sibling routes.
 7. Colours for the **light** surface — this is the content area, not the sidebar.
-8. Loading state as `Skeleton` rows; page size persisted under `pageSize.<resource>`.
+8. Loading state as `Skeleton` rows; page size persisted under `pageSize.<resource>` through a guarded
+   storage helper (`safeStorage` from `@open-elements/ui`), never raw `localStorage`.
+9. The new route in `STATIC_PAGES` of `frontend/e2e/smoke.spec.ts` (plus its detail page, if any).
 
 ## Known library issues to be aware of
 
@@ -458,5 +463,7 @@ resolve: {
 |---|---|
 | [nextjs-app-layer#9](https://github.com/OpenElementsLabs/nextjs-app-layer/issues/9) | published ESM has extension-less relative imports → needs `transpilePackages` and a Vitest alias |
 | [nextjs-app-layer#10](https://github.com/OpenElementsLabs/nextjs-app-layer/issues/10) | proxy buffers request bodies and drops `Range` → unusable for binary payloads |
+| [open-elements-ui#19](https://github.com/OpenElementsLabs/open-elements-ui/issues/19) | `TablePagination` writes the page size to `localStorage` unguarded → changing the page size throws in browsers that block storage |
+| [nextjs-app-layer#14](https://github.com/OpenElementsLabs/nextjs-app-layer/issues/14) | admin pages read the page size from `localStorage` unguarded → they crash in browsers that block storage |
 | [open-elements-ui#12](https://github.com/OpenElementsLabs/open-elements-ui/issues/12) | `Sidebar` sets no text colour on its dark surfaces → plain `bottomChildren` render black on navy |
 | [open-tasks#53](https://github.com/OpenElementsLabs/open-tasks/issues/53) | vestigial `BACKEND_URL` build argument, copied from the rewrite era |

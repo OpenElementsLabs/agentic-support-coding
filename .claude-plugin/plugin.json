@@ -3,7 +3,7 @@
   "name": "agentic-support-coding",
   "displayName": "Open Elements Agentic Support Coding",
   "version": "0.2.0",
-  "description": "Coding best-practices skills for Open Elements projects: modern idiomatic Java, public Java API design, the standard Open Elements application shell and view flow, distinctive production-grade frontend design, web accessibility (WCAG 2.1), and building web frontends with the Next.js/React/TypeScript/Tailwind/shadcn stack.",
+  "description": "Coding best-practices skills for Open Elements projects: modern idiomatic Java, public Java API design, the standard Open Elements application shell and view flow, distinctive production-grade frontend design, web accessibility (WCAG 2.1), cross-browser compatibility including hardened browsers, and building web frontends with the Next.js/React/TypeScript/Tailwind/shadcn stack.",
   "author": {
     "name": "Open Elements",
     "url": "https://open-elements.com"
@@ -22,6 +22,8 @@
     "frontend",
     "app-layout",
     "nextjs",
-    "accessibility"
+    "accessibility",
+    "browser-compatibility",
+    "playwright"
   ]
 }

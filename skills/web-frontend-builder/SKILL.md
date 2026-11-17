@@ -183,6 +183,10 @@ pnpm test
 - Avoid excessive mocking — prefer simple stub/dummy implementations
 - New features must reach at least **70% test coverage** on the added or changed code (see [software-quality.md](${CLAUDE_PLUGIN_ROOT}/conventions/software-quality.md)); measure with `pnpm test --coverage`
 
+### Browser Compatibility
+
+Every frontend gets the setup from the `browser-compatibility` skill: a `browserslist` that includes Firefox ESR, `eslint-plugin-compat`, a lint ban on unguarded `localStorage`/`sessionStorage`, and Playwright smoke tests in CI for Chromium, Firefox, WebKit and a hardened Firefox profile (LibreWolf-like privacy settings).
+
 ## Common Commands
 
 - **Activate the pinned Node version**: `nvm use` (reads `.nvmrc`)
@@ -201,6 +205,8 @@ Before considering a feature complete, verify:
 - [ ] `pnpm build` succeeds without errors
 - [ ] `pnpm lint` passes
 - [ ] `pnpm tsc --noEmit` reports no type errors
+- [ ] No unguarded `localStorage`/`sessionStorage` access; `eslint-plugin-compat` passes (`browser-compatibility` skill)
+- [ ] New pages are listed in the cross-browser smoke test (`frontend/e2e/smoke.spec.ts`)
 - [ ] All pages are responsive (mobile, tablet, desktop)
 - [ ] No bare HTML elements where shadcn/ui components exist
 - [ ] No hardcoded user-facing strings — all are i18n-ready
