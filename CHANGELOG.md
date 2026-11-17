@@ -4,6 +4,23 @@ All notable changes to this plugin are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Frontend skill `browser-compatibility`: `browserslist` (incl. Firefox ESR, without Opera Mini) with
+  `eslint-plugin-compat`, a lint ban on unguarded `localStorage`/`sessionStorage`, the privacy
+  settings of hardened browsers such as LibreWolf and what they break, and Playwright cross-browser
+  smoke tests (Chromium, Firefox, WebKit and a `firefox-hardened` profile) with a GitHub Actions
+  workflow against the Docker stack and the mock OIDC server. The smoke-test rules record the
+  causes of flaky runs found while introducing it in `resource-planning`.
+
+### Changed
+
+- `web-frontend-builder` and `open-elements-app-layout` point to the new skill from their testing
+  sections and checklists; `open-elements-app-layout` lists the unguarded-storage issues
+  open-elements-ui#19 and nextjs-app-layer#14.
+
 ## [0.2.0] - 2026-09-07
 
 ### Added

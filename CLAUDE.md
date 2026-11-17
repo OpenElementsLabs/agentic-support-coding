@@ -29,6 +29,7 @@ The repository root is the plugin root (and the marketplace root).
 
 - `frontend-design` — create distinctive, production-grade frontend interfaces with high design quality, avoiding generic AI aesthetics.
 - `web-frontend-builder` — build web frontend applications with the Open Elements stack (Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, pnpm).
+- `browser-compatibility` — keep a frontend working in every supported browser, including hardened ones (LibreWolf): compat lint, guarded storage, Playwright cross-browser smoke tests in CI.
 - `web-accessibility` — audit and improve web accessibility following WCAG 2.1 guidelines.
 
 The `web-frontend-builder` skill references the `typescript-best-practices` and `open-elements-brand-guidelines` skills, which live in [`agentic-support-open-elements`](https://github.com/OpenElementsLabs/agentic-support-open-elements) and are **not** bundled here. Those references are intentional prose pointers; install that plugin for the full set.
